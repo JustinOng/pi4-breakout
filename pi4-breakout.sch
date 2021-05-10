@@ -1,0 +1,498 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Raspberry_Pi_2_3 J1
+U 1 1 60A53500
+P 7200 3300
+F 0 "J1" H 6550 4550 50  0000 C CNN
+F 1 "Raspberry_Pi" H 7800 2050 50  0000 C CNN
+F 2 "RPi_Hat:Pin_Header_Straight_2x20" H 7200 3300 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 7200 3300 50  0001 C CNN
+	1    7200 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 60A55A20
+P 7100 4800
+F 0 "#PWR0101" H 7100 4550 50  0001 C CNN
+F 1 "GND" H 7105 4627 50  0000 C CNN
+F 2 "" H 7100 4800 50  0001 C CNN
+F 3 "" H 7100 4800 50  0001 C CNN
+	1    7100 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4600 6800 4700
+Wire Wire Line
+	6800 4700 6900 4700
+Wire Wire Line
+	7500 4700 7500 4600
+Wire Wire Line
+	7400 4600 7400 4700
+Connection ~ 7400 4700
+Wire Wire Line
+	7400 4700 7500 4700
+Wire Wire Line
+	7300 4700 7300 4600
+Connection ~ 7300 4700
+Wire Wire Line
+	7300 4700 7400 4700
+Wire Wire Line
+	7200 4600 7200 4700
+Connection ~ 7200 4700
+Wire Wire Line
+	7200 4700 7300 4700
+Wire Wire Line
+	7100 4700 7100 4600
+Connection ~ 7100 4700
+Wire Wire Line
+	7100 4700 7200 4700
+Wire Wire Line
+	7000 4600 7000 4700
+Connection ~ 7000 4700
+Wire Wire Line
+	7000 4700 7100 4700
+Wire Wire Line
+	6900 4700 6900 4600
+Connection ~ 6900 4700
+Wire Wire Line
+	6900 4700 7000 4700
+Wire Wire Line
+	7100 4700 7100 4800
+Text Label 5900 2400 0    50   ~ 0
+UART_TXD
+Text Label 5900 2500 0    50   ~ 0
+UART_RXD
+Text Label 8400 2700 2    50   ~ 0
+I2C_SDA
+Text Label 8400 2800 2    50   ~ 0
+I2C_SCL
+Wire Wire Line
+	5900 2400 6400 2400
+Wire Wire Line
+	6400 2500 5900 2500
+$Comp
+L Device:R R1
+U 1 1 60A595C2
+P 8500 2400
+F 0 "R1" H 8570 2446 50  0000 L CNN
+F 1 "DNP" H 8570 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8430 2400 50  0001 C CNN
+F 3 "~" H 8500 2400 50  0001 C CNN
+	1    8500 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60A59E60
+P 8800 2400
+F 0 "R2" H 8870 2446 50  0000 L CNN
+F 1 "DNP" H 8870 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8730 2400 50  0001 C CNN
+F 3 "~" H 8800 2400 50  0001 C CNN
+	1    8800 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2700 8500 2550
+Wire Wire Line
+	8000 2700 8500 2700
+Wire Wire Line
+	8800 2800 8800 2550
+Wire Wire Line
+	8000 2800 8800 2800
+Wire Wire Line
+	8800 2250 8800 2100
+Wire Wire Line
+	8500 2250 8500 2100
+$Comp
+L power:+3V3 #PWR0102
+U 1 1 60A5B740
+P 8500 2100
+F 0 "#PWR0102" H 8500 1950 50  0001 C CNN
+F 1 "+3V3" H 8515 2273 50  0000 C CNN
+F 2 "" H 8500 2100 50  0001 C CNN
+F 3 "" H 8500 2100 50  0001 C CNN
+	1    8500 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 60A5C335
+P 8800 2100
+F 0 "#PWR0103" H 8800 1950 50  0001 C CNN
+F 1 "+3V3" H 8815 2273 50  0000 C CNN
+F 2 "" H 8800 2100 50  0001 C CNN
+F 3 "" H 8800 2100 50  0001 C CNN
+	1    8800 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 60A5D16F
+P 2700 2350
+F 0 "J2" H 2800 2550 50  0000 R CNN
+F 1 "I2C_0" H 2800 2050 50  0000 R CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 2700 2350 50  0001 C CNN
+F 3 "~" H 2700 2350 50  0001 C CNN
+	1    2700 2350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 60A5FD23
+P 2700 3050
+F 0 "J3" H 2800 3250 50  0000 R CNN
+F 1 "I2C_1" H 2800 2750 50  0000 R CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 2700 3050 50  0001 C CNN
+F 3 "~" H 2700 3050 50  0001 C CNN
+	1    2700 3050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 60A604CB
+P 2700 3750
+F 0 "J4" H 2800 3950 50  0000 R CNN
+F 1 "I2C_2" H 2800 3450 50  0000 R CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 2700 3750 50  0001 C CNN
+F 3 "~" H 2700 3750 50  0001 C CNN
+	1    2700 3750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 60A60DEB
+P 2700 4450
+F 0 "J5" H 2800 4650 50  0000 R CNN
+F 1 "I2C_3" H 2800 4150 50  0000 R CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 2700 4450 50  0001 C CNN
+F 3 "~" H 2700 4450 50  0001 C CNN
+	1    2700 4450
+	-1   0    0    -1  
+$EndComp
+Text Label 3600 2150 2    50   ~ 0
+I2C_SDA
+Text Label 3600 2050 2    50   ~ 0
+I2C_SCL
+$Comp
+L power:+3V3 #PWR0104
+U 1 1 60A66063
+P 2900 1650
+F 0 "#PWR0104" H 2900 1500 50  0001 C CNN
+F 1 "+3V3" H 2915 1823 50  0000 C CNN
+F 2 "" H 2900 1650 50  0001 C CNN
+F 3 "" H 2900 1650 50  0001 C CNN
+	1    2900 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 60A676A5
+P 3300 4750
+F 0 "#PWR0105" H 3300 4500 50  0001 C CNN
+F 1 "GND" H 3305 4577 50  0000 C CNN
+F 2 "" H 3300 4750 50  0001 C CNN
+F 3 "" H 3300 4750 50  0001 C CNN
+	1    3300 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2450 2900 2450
+Connection ~ 3100 2450
+Wire Wire Line
+	3100 2450 3100 2150
+Wire Wire Line
+	2900 2550 3000 2550
+Connection ~ 3000 2550
+Wire Wire Line
+	3000 2550 3000 3250
+Wire Wire Line
+	2900 3250 3000 3250
+Connection ~ 3000 3250
+Wire Wire Line
+	3000 3250 3000 3950
+Wire Wire Line
+	2900 3950 3000 3950
+Connection ~ 3000 3950
+Wire Wire Line
+	3000 3950 3000 4650
+Wire Wire Line
+	2900 4650 3000 4650
+Wire Wire Line
+	2900 4550 3100 4550
+Wire Wire Line
+	3100 4550 3100 3850
+Wire Wire Line
+	2900 3850 3100 3850
+Connection ~ 3100 3850
+Wire Wire Line
+	3100 3850 3100 3150
+Wire Wire Line
+	2900 3150 3100 3150
+Connection ~ 3100 3150
+Wire Wire Line
+	3100 3150 3100 2450
+Wire Wire Line
+	3200 2350 3200 3050
+Wire Wire Line
+	3200 4450 2900 4450
+Connection ~ 3200 2350
+Wire Wire Line
+	3200 2350 2900 2350
+Wire Wire Line
+	2900 2250 3300 2250
+Wire Wire Line
+	3300 2250 3300 2950
+Wire Wire Line
+	3200 3050 2900 3050
+Connection ~ 3200 3050
+Wire Wire Line
+	3200 3050 3200 3750
+Wire Wire Line
+	2900 3750 3200 3750
+Connection ~ 3200 3750
+Wire Wire Line
+	3200 3750 3200 4450
+Wire Wire Line
+	2900 4350 3300 4350
+Connection ~ 3300 4350
+Wire Wire Line
+	3300 4350 3300 4750
+Wire Wire Line
+	2900 3650 3300 3650
+Connection ~ 3300 3650
+Wire Wire Line
+	3300 3650 3300 4350
+Wire Wire Line
+	2900 2950 3300 2950
+Connection ~ 3300 2950
+Wire Wire Line
+	3300 2950 3300 3650
+Wire Wire Line
+	3100 2150 3600 2150
+Wire Wire Line
+	3600 2050 3000 2050
+Wire Wire Line
+	3000 2050 3000 2550
+$Comp
+L Jumper:Jumper_3_Open JP1
+U 1 1 60A9042F
+P 3200 1750
+F 0 "JP1" H 3200 1974 50  0000 C CNN
+F 1 "Power" H 3200 1883 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3200 1750 50  0001 C CNN
+F 3 "~" H 3200 1750 50  0001 C CNN
+	1    3200 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0106
+U 1 1 60A927CA
+P 3500 1650
+F 0 "#PWR0106" H 3500 1500 50  0001 C CNN
+F 1 "+5V" H 3515 1823 50  0000 C CNN
+F 2 "" H 3500 1650 50  0001 C CNN
+F 3 "" H 3500 1650 50  0001 C CNN
+	1    3500 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 60A92D7F
+P 7000 1800
+F 0 "#PWR0107" H 7000 1650 50  0001 C CNN
+F 1 "+5V" H 7015 1973 50  0000 C CNN
+F 2 "" H 7000 1800 50  0001 C CNN
+F 3 "" H 7000 1800 50  0001 C CNN
+	1    7000 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0108
+U 1 1 60A9558C
+P 7300 1800
+F 0 "#PWR0108" H 7300 1650 50  0001 C CNN
+F 1 "+3V3" H 7315 1973 50  0000 C CNN
+F 2 "" H 7300 1800 50  0001 C CNN
+F 3 "" H 7300 1800 50  0001 C CNN
+	1    7300 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1650 2900 1750
+Wire Wire Line
+	2900 1750 2950 1750
+Wire Wire Line
+	3450 1750 3500 1750
+Wire Wire Line
+	3500 1750 3500 1650
+Wire Wire Line
+	3200 1900 3200 2350
+$Comp
+L Connector_Generic:Conn_01x03 J6
+U 1 1 60AA56A2
+P 2700 5450
+F 0 "J6" H 2618 5767 50  0000 C CNN
+F 1 "UART" H 2618 5676 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2700 5450 50  0001 C CNN
+F 3 "~" H 2700 5450 50  0001 C CNN
+	1    2700 5450
+	-1   0    0    -1  
+$EndComp
+Text Label 3400 5450 2    50   ~ 0
+UART_TXD
+Text Label 3400 5350 2    50   ~ 0
+UART_RXD
+Wire Wire Line
+	3400 5350 2900 5350
+Wire Wire Line
+	2900 5450 3400 5450
+$Comp
+L power:GND #PWR0109
+U 1 1 60AA95D4
+P 3000 5650
+F 0 "#PWR0109" H 3000 5400 50  0001 C CNN
+F 1 "GND" H 3005 5477 50  0000 C CNN
+F 2 "" H 3000 5650 50  0001 C CNN
+F 3 "" H 3000 5650 50  0001 C CNN
+	1    3000 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 5650 3000 5550
+Wire Wire Line
+	3000 5550 2900 5550
+Wire Wire Line
+	7000 2000 7000 1900
+Wire Wire Line
+	7000 1900 7100 1900
+Wire Wire Line
+	7100 1900 7100 2000
+Connection ~ 7000 1900
+Wire Wire Line
+	7000 1900 7000 1800
+$Comp
+L Switch:SW_Push SW1
+U 1 1 60AB955A
+P 5600 3100
+F 0 "SW1" V 5646 3052 50  0000 R CNN
+F 1 "Power" V 5555 3052 50  0000 R CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 5600 3300 50  0001 C CNN
+F 3 "~" H 5600 3300 50  0001 C CNN
+	1    5600 3100
+	0    -1   -1   0   
+$EndComp
+Text Label 5700 2800 0    50   ~ 0
+GPIO_SHUTDOWN
+Text Label 5200 2800 0    50   ~ 0
+I2C_SCL
+Wire Wire Line
+	5200 2800 5600 2800
+Wire Wire Line
+	5600 2800 5600 2900
+Connection ~ 5600 2800
+Wire Wire Line
+	5600 2800 6400 2800
+$Comp
+L power:GND #PWR0110
+U 1 1 60AC38D5
+P 5600 3400
+F 0 "#PWR0110" H 5600 3150 50  0001 C CNN
+F 1 "GND" H 5605 3227 50  0000 C CNN
+F 2 "" H 5600 3400 50  0001 C CNN
+F 3 "" H 5600 3400 50  0001 C CNN
+	1    5600 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3300 5600 3400
+Text Notes 4000 2600 0    50   ~ 0
+Configure GPIO17 to shutdown when pressed:\nAdd to /boot/config.txt:\ndtoverlay=gpio-shutdown,gpio_pin=17
+Text Notes 4000 3300 0    50   ~ 0
+RPi boots up when\nGPIO3 (I2C_SCL) is grounded.\nThis is fixed in hardware and has\nthe side-effect of disrupting I2C\nwhen the button is pressed
+Text Label 9000 3100 2    50   ~ 0
+LED_POWER_INDICATOR
+Wire Wire Line
+	8000 3100 9000 3100
+$Comp
+L Device:LED_ALT D1
+U 1 1 60ACB761
+P 9000 3800
+F 0 "D1" V 8993 3682 50  0000 R CNN
+F 1 "LED_ALT" V 8948 3682 50  0001 R CNN
+F 2 "Diode_SMD:D_0603_1608Metric" H 9000 3800 50  0001 C CNN
+F 3 "~" H 9000 3800 50  0001 C CNN
+	1    9000 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60ACD1A9
+P 9000 3400
+F 0 "R3" H 9070 3446 50  0000 L CNN
+F 1 "1k" H 9070 3355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8930 3400 50  0001 C CNN
+F 3 "~" H 9000 3400 50  0001 C CNN
+	1    9000 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 60ACD907
+P 9000 4100
+F 0 "#PWR0111" H 9000 3850 50  0001 C CNN
+F 1 "GND" H 9005 3927 50  0000 C CNN
+F 2 "" H 9000 4100 50  0001 C CNN
+F 3 "" H 9000 4100 50  0001 C CNN
+	1    9000 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 4100 9000 3950
+Wire Wire Line
+	9000 3650 9000 3550
+Wire Wire Line
+	9000 3250 9000 3100
+Wire Wire Line
+	7300 1800 7300 2000
+NoConn ~ 7400 2000
+NoConn ~ 8000 2400
+NoConn ~ 8000 2500
+NoConn ~ 8000 3000
+NoConn ~ 8000 3200
+NoConn ~ 8000 3400
+NoConn ~ 8000 3500
+NoConn ~ 8000 3600
+NoConn ~ 8000 3700
+NoConn ~ 8000 3800
+NoConn ~ 8000 4000
+NoConn ~ 8000 4100
+NoConn ~ 6400 4000
+NoConn ~ 6400 3900
+NoConn ~ 6400 3800
+NoConn ~ 6400 3700
+NoConn ~ 6400 3600
+NoConn ~ 6400 3500
+NoConn ~ 6400 3300
+NoConn ~ 6400 3200
+NoConn ~ 6400 3100
+NoConn ~ 6400 2900
+NoConn ~ 6400 2700
+Text Notes 9300 3500 0    50   ~ 0
+Configure LED on GPIO5 to turn on\nwhen the Raspberry Pi is turned on:\nRun `crontab -e`\nAdd `@reboot raspi-gpio set 5 op dh`
+$EndSCHEMATC
